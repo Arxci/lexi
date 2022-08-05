@@ -1,0 +1,21 @@
+$white: #FFFFFF;
+$offWhite: #ededed;
+$black: #000000;
+
+//primary colors
+$forestGreen: #014421;
+$lighterGreen: #04bd5c;
+$grey: #1A1A1D;
+$lighterGrey: #4E4E50;
+
+//rgba colors
+$fadedGrey: rgba(110, 109, 109, 0.1);
+$fadedBlack: rgba(0, 0, 0, 0.1);
+
+$titleColor: $forestGreen;
+$paragraphColor: #adacac;
+$subtitleColor: $forestGreen;
+$headerColor: $white;
+
+//gradients
+$greenGradient: linear-gradient(to right, $lighterGreen, $forestGreen);

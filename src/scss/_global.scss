@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    color: $black;
+    outline: none;
+    border: none;
+    font-family: 'Catamaran', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+.df {
+    display: flex;
+
+    &__aic {
+        align-items: center;
+    }
+
+    &__stretch {
+        align-items: stretch;
+    }
+
+    &__jcc {
+        justify-content: center;
+    }
+
+    &__jcsb {
+        justify-content: space-between;
+    }
+
+    &__jce {
+        justify-content: end;
+    }
+
+    &__jcs {
+        justify-content: start;
+    }
+}
+
+.fd {
+    &__C {
+        flex-direction: column;
+    }
+
+    &__R {
+        flex-direction: row;
+    }
+}
+
+.padding {
+
+    &__a {
+        &L {
+            padding: 2rem;
+        }
+
+        &M {
+            padding: 1rem;
+        }
+
+        &S {
+            padding: 0.5rem;
+        }
+    }
+
+    &__t {
+        &L {
+            padding-top: 2rem;
+        }
+
+        &M {
+            padding-top: 1rem;
+        }
+
+        &S {
+            padding-top: 0.5rem;
+        }
+    }
+
+    &__b {
+        &L {
+            padding-bottom: 2rem;
+        }
+
+        &M {
+            padding-bottom: 1rem;
+        }
+
+        &S {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    &__r {
+        &L {
+            padding-right: 2rem;
+        }
+
+        &M {
+            padding-right: 1rem;
+        }
+
+        &S {
+            padding-right: 0.5em;
+        }
+    }
+
+    &__l {
+
+        &L {
+            padding-left: 2rem;
+        }
+
+        &M {
+            padding-left: 1rem;
+        }
+
+        &S {
+            padding-left: 0.5rem;
+        }
+    }
+
+    &__s {
+
+        &L {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &M {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        &S {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+
+    &__u {
+
+        &L {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        &M {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &S {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+    }
+}
+
+.margin {
+
+    &__a {
+        &L {
+            margin: 2rem;
+        }
+
+        &M {
+            margin: 1rem;
+        }
+
+        &S {
+            margin: 0.5rem;
+        }
+    }
+
+    &__t {
+        &L {
+            margin-top: 2rem;
+        }
+
+        &M {
+            margin-top: 1rem;
+        }
+
+        &S {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &__b {
+        &L {
+            margin-bottom: 2rem;
+        }
+
+        &M {
+            margin-bottom: 1rem;
+        }
+
+        &S {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__r {
+        &L {
+            margin-right: 2rem;
+        }
+
+        &M {
+            margin-right: 1rem;
+        }
+
+        &S {
+            margin-right: 0.5em;
+        }
+    }
+
+    &__l {
+
+        &L {
+            margin-left: 2rem;
+        }
+
+        &M {
+            margin-left: 1rem;
+        }
+
+        &S {
+            margin-left: 0.5rem;
+        }
+    }
+
+    &__s {
+
+        &L {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        &M {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &S {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__u {
+
+        &L {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &M {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &S {
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+.fs {
+    &__L {
+        font-size: 3rem;
+    }
+
+    &__M {
+        font-size: 2rem;
+    }
+
+    &__S {
+        font-size: 1rem;
+    }
+}
+
+.fc {
+    &__l {
+        color: $white;
+    }
+
+    &__d {
+        color: $black;
+    }
+
+    &__a {
+        color: $forestGreen;
+    }
+}
+
+.container {
+    padding: 1rem;
+
+    &__L {
+        max-width: 150rem;
+    }
+
+    &__M {
+        max-width: 100rem;
+    }
+
+    &__S {
+        max-width: 50rem;
+    }
+}
+
+.subtitle {
+    color: $subtitleColor;
+    font-size: 0.8625rem;
+    font-weight: bold;
+}
+
+.title {
+    color: $titleColor;
+    font-size: 2rem;
+}
+
+.text {
+    color: $paragraphColor;
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.hide-for-tablet {
+    @include breakpoint-down(large) {
+        display: none;
+    }
+}

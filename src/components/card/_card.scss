@@ -1,0 +1,73 @@
+.card {
+    margin: 15px; 
+    height: max-content;
+    width: calc((100% / 2) - 30px);
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px $fadedBlack;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+    &:hover, &:focus {
+        transform: scale(1.02);
+        box-shadow: 0px 10px 10px 0px $fadedBlack;
+
+        .card__imageBTN {
+            opacity: 1;
+
+            > a {
+                animation: enable-pointer forwards 350ms;
+            }
+        }
+    }
+
+    @include breakpoint-down(medium) {
+        width: calc((100% / 2) - 30px);
+    }
+
+    @include breakpoint-down(small) {
+        width: calc(100% - 15px);
+    }
+
+    &__top {
+        height: 250px;
+        position: relative;
+    }
+
+    &__imageBTN {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);;
+        width: 100%;
+        height: 250px;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 300ms 50ms ease-in-out;
+
+        > a {
+            background-color: $forestGreen;
+            pointer-events: none;
+            padding: 0.865rem 1.5rem;
+
+            &:hover, &:focus {
+                filter: brightness(1.5);
+            }
+        }
+    }
+
+    &__image {
+        width: fill;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__subtext {
+        font-size: 0.8625rem;
+    }
+}
