@@ -5,10 +5,13 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
-    color: $black;
     outline: none;
     border: none;
     font-family: 'Catamaran', sans-serif;
+}
+
+a {
+    color: $black;
 }
 
 html {

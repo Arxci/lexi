@@ -1,0 +1,70 @@
+.bottombar {
+    border-bottom: 2px solid $fadedGrey;
+    display: flex;
+    gap: 20px;
+
+    @include breakpoint-down(small) {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    &__search {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        overflow: hidden;
+        flex: 1;
+        border-radius: 10px;
+
+        @include breakpoint-down(small) {
+            height: 20px;
+        }
+
+        > form {
+            flex: 1;
+        }
+    }
+
+    &__input {
+        width: fill;
+        background-color: $offWhite;
+        height: 40px;
+
+        @include breakpoint-down(small) {
+            height: 20px;
+        }
+    }
+
+    &__icon {
+        width: 50px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: background-color 300ms ease-in-out;
+
+        @include breakpoint-down(small) {
+            height: 20px;
+        }
+
+        &:hover {
+            background-color: $forestGreen;
+        }
+    }
+
+    &__links {
+        flex: .2;
+        gap: 10px;
+
+        > a {
+            transition: color 300ms ease-in-out;
+
+            &:hover, &:focus {
+                color: $forestGreen
+            }
+        }
+    }
+}

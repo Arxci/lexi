@@ -1,7 +1,11 @@
 .home {
     background-color: $white;
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;    
+
     z-index: 1;
+
+    &__content {
+        display: flex;
+        flex-flow: row wrap;    
+    }
 }

@@ -1,20 +1,27 @@
+import Bottombar from "../../components/bottombar/Bottombar"
 import Card from "../../components/card/Card"
+import { useEffect, useState } from "react"
+import useFavorites from '../../hooks/useFavorites';
 
-const Home = () => {
+const Home = ({imageDetails}) => {
+  const [cards, setCards] = useState(null)
+  const {removeFavorite, addFavorite} = useFavorites();
+
+  useEffect(() => {
+    let myData = require('../../data/data.json').cards;
+    setCards(myData)
+  }, [])
+
   return (
     <div className="home container__S">
-        <Card 
-        image={'https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} 
-        title ={'This is a card title'} 
-        subtext={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.'}/>
-        <Card 
-        image={'https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} 
-        title ={'This is a card title'} 
-        subtext={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.'}/>
-        <Card 
-        image={'https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} 
-        title ={'This is a card title'} 
-        subtext={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.'}/>
+            <Bottombar />
+      <div className="home__content">
+        {
+          cards && cards.map((card) => (
+            <Card key={card.key} removeFavorite={removeFavorite} addFavorite={addFavorite} index={card.key} image={card.image} title={card.title} subtext={card.subtext}/>
+          ))
+        }
+      </div>
     </div>
   )
 }
