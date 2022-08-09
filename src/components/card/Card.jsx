@@ -1,7 +1,6 @@
 import { Favorite } from '@mui/icons-material';
 import React, {useEffect, useState} from 'react'
 
-
 const Card = ({ setCards, cards, card}) => {
     const [isFavorite, setIsFavorite] = useState(card.isFavorite);
 
@@ -45,4 +44,4 @@ const Card = ({ setCards, cards, card}) => {
   )
 }
 
-export default Card
+export default React.memo(Card)

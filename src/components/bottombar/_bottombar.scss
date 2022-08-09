@@ -6,7 +6,7 @@
     &__content {
         display: flex;
         gap: 20px;
-        width: fill;
+        width: stretch;
 
         @include breakpoint-down(small) {
             flex-direction: column;

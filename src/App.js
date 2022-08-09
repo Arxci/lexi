@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import Home from './pages/home/Home';
 import Favorites from './pages/favorites/Favorites';
 import Bottombar from './components/bottombar/Bottombar';
+import Details from './pages/details/Details';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -41,6 +42,12 @@ function App() {
             setCards={setCards}
             cards={cards}
             />}>
+            </Route>
+            <Route path="/">
+                <Route path=':key' element={<Details 
+                setCurrentPage={setCurrentPage} 
+                cards={cards}/>}>
+                </Route>
             </Route>
           </Routes>
         </div>
