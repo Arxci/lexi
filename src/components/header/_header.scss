@@ -6,8 +6,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     box-shadow: 0 2px 5px 2px $fadedBlack;
     z-index: 999;
+
+    &__nav {
+        text-align: center;
+    }
 
     &__title {
         background: $greenGradient;

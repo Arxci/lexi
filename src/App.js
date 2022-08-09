@@ -1,28 +1,50 @@
-import { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import {Routes, Route } from 'react-router-dom';
 import Header from "./components/header/Header";
-import useImage from './hooks/useImage';
 import Home from './pages/home/Home';
-import ImageDetails from './pages/imageDetails/ImageDetails';
-
+import Favorites from './pages/favorites/Favorites';
+import Bottombar from './components/bottombar/Bottombar';
 
 function App() {
-  const {imageDetails, setImageDetails} = useImage();
+  const [currentPage, setCurrentPage] = useState(0);
+  const [cards, setCards] = useState(null)
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('CARDS')
+
+    if (data !== null) {
+      setCards(JSON.parse(data));
+    } else {
+      let myData = require('../src/data/data.json').cards;
+      setCards(myData)
+    }
+  }, [])
+
+  useEffect(() => {
+      window.localStorage.setItem('CARDS', JSON.stringify(cards))
+  }, [cards])
 
   return (
-    <Router>
       <div className="app">
         <Header />
         <div className='screen'>
-            <Routes>
-              <Route>
-              <Route path="/" element={<Home imageDetails={imageDetails}/>}/>
-              </Route>
-              <Route path="/image-details" element={<ImageDetails imageDetails={imageDetails}/>}/>
-            </Routes>
-          </div>
+          <Bottombar currentPage={currentPage}/>
+          <Routes>
+            <Route>
+            <Route path="/" element={<Home
+            setCurrentPage={setCurrentPage}
+            setCards={setCards}
+            cards={cards}/>}/>
+            </Route>
+            <Route path="/favorites" element={<Favorites 
+            setCurrentPage={setCurrentPage}
+            setCards={setCards}
+            cards={cards}
+            />}>
+            </Route>
+          </Routes>
+        </div>
       </div>
-    </Router>
   );
 }
 

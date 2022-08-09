@@ -233,7 +233,7 @@ html {
   max-width: 100rem;
 }
 .container__S {
-  max-width: 50rem;
+  max-width: 60rem;
 }
 
 .subtitle {
@@ -274,12 +274,14 @@ html {
   min-height: 100vh;
   padding-top: 8rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .home {
   background-color: #FFFFFF;
   width: 100%;
+  min-height: 100vh;
   z-index: 1;
 }
 .home__content {
@@ -295,8 +297,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
   z-index: 999;
+}
+.header__nav {
+  text-align: center;
 }
 .header__title {
   background: linear-gradient(to right, #04bd5c, #014421);
@@ -318,17 +324,18 @@ html {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
 }
-.card:hover .card__imageBTN, .card.focus .card__imageBTN, .card:focus .card__imageBTN {
+.card:hover .card__imageBTN {
   opacity: 1;
+  transform: scale(1.05);
 }
-.card:hover .card__imageBTN > a, .card.focus .card__imageBTN > a, .card:focus .card__imageBTN > a {
+.card:hover .card__imageBTN > a {
   -webkit-animation: enable-pointer forwards 350ms;
           animation: enable-pointer forwards 350ms;
 }
-.card:hover .card__top, .card.focus .card__top, .card:focus .card__top {
+.card:hover .card__top > img {
   transform: scale(1.05);
 }
-.card:hover .card__heart, .card.focus .card__heart, .card:focus .card__heart {
+.card:hover .card__heart {
   -webkit-animation: enable-pointer forwards 350ms;
           animation: enable-pointer forwards 350ms;
 }
@@ -345,7 +352,11 @@ html {
 .card__top {
   height: 250px;
   position: relative;
-  transition: transform 150ms ease-in-out;
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
+}
+.card__top > img {
+  transition: transform 300ms ease-in-out;
 }
 .card__imageBTN {
   position: absolute;
@@ -358,7 +369,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 300ms 50ms ease-in-out;
+  transition: opacity 300ms 50ms ease-in-out, transform 300ms ease-in-out;
 }
 .card__imageBTN > a {
   background-color: #014421;
@@ -389,25 +400,42 @@ html {
 .card__image {
   width: -webkit-fill-available;
   width: -moz-available;
-  width: fill;
+  width: stretch;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.card__bottom {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 .card__title {
   text-align: center;
 }
 .card__subtext {
-  font-size: 0.8625rem;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .bottombar {
+  background-color: #FFFFFF;
   border-bottom: 2px solid rgba(110, 109, 109, 0.1);
+  width: 100%;
+}
+.bottombar__content {
   display: flex;
   gap: 20px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
 }
 @media (max-width: 39.9375em) {
-  .bottombar {
+  .bottombar__content {
     flex-direction: column;
     gap: 10px;
   }
@@ -417,7 +445,7 @@ html {
   height: 40px;
   align-items: center;
   overflow: hidden;
-  flex: 1;
+  flex: 0.8;
   border-radius: 10px;
 }
 @media (max-width: 39.9375em) {
@@ -426,12 +454,12 @@ html {
   }
 }
 .bottombar__search > form {
-  flex: 1;
+  width: 100%;
 }
 .bottombar__input {
   width: -webkit-fill-available;
   width: -moz-available;
-  width: fill;
+  width: stretch;
   background-color: #ededed;
   height: 40px;
 }
@@ -448,7 +476,7 @@ html {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 @media (max-width: 39.9375em) {
   .bottombar__icon {
@@ -457,6 +485,7 @@ html {
 }
 .bottombar__icon:hover {
   background-color: #014421;
+  color: #FFFFFF;
 }
 .bottombar__links {
   flex: 0.2;
@@ -467,4 +496,17 @@ html {
 }
 .bottombar__links > a:hover, .bottombar__links > a:focus {
   color: #014421;
+}
+.bottombar__links > a.active {
+  color: #014421;
+}
+
+.favorites {
+  background-color: #FFFFFF;
+  width: 100%;
+  min-height: 100vh;
+}
+.favorites__content {
+  display: flex;
+  flex-flow: row wrap;
 }/*# sourceMappingURL=style.css.map */

@@ -1,39 +1,51 @@
 {
     "cards": [
         {
-            "title": "Apple sauce is amazing",
-            "image": "https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "subtext": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.",
+            "title": "This is card title",
+            "image": "https://images.pexels.com/photos/3932930/pexels-photo-3932930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "subtext": "This is card subtext 08/20/2022",
+            "description": "",
+            "isFavorite": false,
             "key": 0
         },
         {
-            "title": "Apple sauce is amazing",
-            "image": "https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "subtext": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.",
+            "title": "This is card title",
+            "image": "https://images.pexels.com/photos/12486294/pexels-photo-12486294.jpeg?cs=srgb&dl=pexels-intel-core-i-k-12486294.jpg&fm=jpg",
+            "subtext": "This is card subtext 08/20/2022",
+            "description": "",
+            "isFavorite": false,
             "key": 1
         },
         {
-            "title": "Apple sauce is amazing",
-            "image": "https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "subtext": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.",
+            "title": "This is card title",
+            "image": "https://images.pexels.com/photos/4298629/pexels-photo-4298629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "subtext": "This is card subtext 08/20/2022",
+            "description": "",
+            "isFavorite": false,
             "key": 2
         },
         {
-            "title": "Apple sauce is amazing",
-            "image": "https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "subtext": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.",
+            "title": "This is card title",
+            "image": "https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "subtext": "This is card subtext 08/20/2022",
+            "description": "",
+            "isFavorite": false,
             "key": 3
         },
         {
-            "title": "Apple sauce is amazing",
+            "title": "This is card title",
             "image": "https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "subtext": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.",
+            "subtext": "This is card subtext 08/20/2022",
+            "description": "",
+            "isFavorite": false,
             "key": 4
         },
         {
-            "title": "Apple sauce is amazing",
-            "image": "https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "subtext": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, architecto rerum, omnis explicabo cum repellat aspernatur facere deleniti numquam quaerat impedit modi! Velit porro repellat eaque minima perspiciatis tempore libero.",
+            "title": "This is card title",
+            "image": "https://images.pexels.com/photos/4569338/pexels-photo-4569338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "subtext": "This is card subtext 08/20/2022",
+            "description": "",
+            "isFavorite": false,
             "key": 5
         }
     ]

@@ -7,10 +7,11 @@
     box-shadow: 0px 5px 10px 0px $fadedBlack;
     background-color: $white;
 
-    &:hover, &.focus, &:focus {
+    &:hover {
 
         .card__imageBTN {
             opacity: 1;
+            transform: scale(1.05);
 
             > a {
                 animation: enable-pointer forwards 350ms;
@@ -18,7 +19,9 @@
         }
 
         .card__top {
-           transform: scale(1.05);
+           > img {
+            transform: scale(1.05);
+           }
         }
 
         .card__heart {
@@ -37,7 +40,12 @@
     &__top {
         height: 250px;
         position: relative;
-        transition: transform 150ms ease-in-out;
+        overflow: hidden;
+        transition: transform 300ms ease-in-out;
+
+        > img {
+            transition: transform 300ms ease-in-out;
+        }
     }
 
     &__imageBTN {
@@ -51,7 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: opacity 300ms 50ms ease-in-out;
+        transition: opacity 300ms 50ms ease-in-out, transform 300ms ease-in-out;
 
         > a {
             background-color: $forestGreen;
@@ -86,9 +94,15 @@
     }
 
     &__image {
-        width: fill;
+        width: stretch;
         height: 250px;
         object-fit: cover;
+    }
+
+    &__bottom {
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__title {
@@ -96,6 +110,11 @@
     }
 
     &__subtext {
-        font-size: 0.8625rem;
+        font-size: 1rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
     }
 }
