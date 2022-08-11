@@ -1,5 +1,6 @@
 import { Favorite } from '@mui/icons-material';
 import React, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 
 const Card = ({ setCards, cards, card}) => {
     const [isFavorite, setIsFavorite] = useState(card.isFavorite);
@@ -24,9 +25,9 @@ const Card = ({ setCards, cards, card}) => {
         <div className='card__top'>
             <img className='card__image' src={card.image} alt='card'/>
             <div className='card__imageBTN'>
-                <a href='/'>
+                <Link to={'/' + card.key}>
                     LEARN MORE
-                </a>
+                </Link>
                 <div className='card__heart' onClick={() => toggleFavorite()}>
                     <Favorite className={isFavorite ? "favorite red" : 'favorite'}/>
                 </div>

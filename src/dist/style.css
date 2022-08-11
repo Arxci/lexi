@@ -440,55 +440,8 @@ html {
     gap: 10px;
   }
 }
-.bottombar__search {
-  display: flex;
-  height: 40px;
-  align-items: center;
-  overflow: hidden;
-  flex: 0.8;
-  border-radius: 10px;
-}
-@media (max-width: 39.9375em) {
-  .bottombar__search {
-    height: 20px;
-  }
-}
-.bottombar__search > form {
-  width: 100%;
-}
-.bottombar__input {
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
-  background-color: #ededed;
-  height: 40px;
-}
-@media (max-width: 39.9375em) {
-  .bottombar__input {
-    height: 20px;
-  }
-}
-.bottombar__icon {
-  width: 50px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-}
-@media (max-width: 39.9375em) {
-  .bottombar__icon {
-    height: 20px;
-  }
-}
-.bottombar__icon:hover {
-  background-color: #014421;
-  color: #FFFFFF;
-}
 .bottombar__links {
-  flex: 0.2;
+  width: 100%;
   gap: 10px;
 }
 .bottombar__links > a {

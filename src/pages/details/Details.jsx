@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-const Details = ({cards, setCurrentPage}) => {
+const Details = ({setCurrentPage, cards}) => {
     const [card, setCard] = useState(null)
     let {key} = useParams();
 
@@ -10,19 +10,13 @@ const Details = ({cards, setCurrentPage}) => {
     }, [])
 
     useEffect(() => {
-        if (cards !== null) {
-            cards.map(c => {
-                if (c.key == key) {
-                    console.log(c)
-                    setCard(c);
-                }
-            })
-        }
-    }, [cards])
-
-    useEffect(() => {
-        console.log(card)
-    }, [card])
+        console.log(cards)
+        cards.forEach(card => {
+            if (card.key === parseInt(key)) {
+                setCard(card)
+            }
+        })
+    }, [])
 
   return (
     <div className='details container__S'>
@@ -48,4 +42,4 @@ const Details = ({cards, setCurrentPage}) => {
   )
 }
 
-export default Details
+export default React.memo(Details)

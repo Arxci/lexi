@@ -14,56 +14,8 @@
         }
     }
 
-
-    &__search {
-        display: flex;
-        height: 40px;
-        align-items: center;
-        overflow: hidden;
-        flex: .8;
-        border-radius: 10px;
-
-        @include breakpoint-down(small) {
-            height: 20px;
-        }
-
-        > form {
-            width: 100%;
-        }
-    }
-
-    &__input {
-        width: stretch;
-        background-color: $offWhite;
-        height: 40px;
-
-        @include breakpoint-down(small) {
-            height: 20px;
-        }
-    }
-
-    &__icon {
-        width: 50px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-
-        @include breakpoint-down(small) {
-            height: 20px;
-        }
-
-        &:hover {
-            background-color: $forestGreen;
-            color: $white;
-        }
-    }
-
     &__links {
-        flex: .2;
+        width: 100%;
         gap: 10px;
 
         > a {

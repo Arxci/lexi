@@ -8,17 +8,15 @@ import Details from './pages/details/Details';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
-  const [cards, setCards] = useState(null)
+  const [cards, setCards] = useState(require('../src/data/data.json').cards)
 
   useEffect(() => {
     const data = window.localStorage.getItem('CARDS')
 
-    if (data !== null) {
+    if (data) {
       setCards(JSON.parse(data));
-    } else {
-      let myData = require('../src/data/data.json').cards;
-      setCards(myData)
     }
+
   }, [])
 
   useEffect(() => {
@@ -45,8 +43,7 @@ function App() {
             </Route>
             <Route path="/">
                 <Route path=':key' element={<Details 
-                setCurrentPage={setCurrentPage} 
-                cards={cards}/>}>
+                setCurrentPage={setCurrentPage} cards={cards}/>}>
                 </Route>
             </Route>
           </Routes>
